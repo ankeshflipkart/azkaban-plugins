@@ -140,7 +140,8 @@ public class HdfsBrowserServlet extends LoginAbstractAzkabanServlet {
 			}
 		}
 		catch (Exception e) {
-			//e.printStackTrace();
+		    logger.error("could not browse: ", e);
+		    e.printStackTrace();
 			Page page = newPage(req, resp, session, "azkaban/viewer/hdfs/hdfsbrowserpage.vm");
 			page.add("error_message", "Error: " + e.getMessage());
 			page.add("user", username);
