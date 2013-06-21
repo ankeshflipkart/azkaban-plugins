@@ -30,6 +30,7 @@ cp_lib "libfb303*"
 cp_lib "mysql-*"
 cp_lib "guava-*"
 cp_lib "*hbase*"
+cp_lib "*avro*"
 
 
 cp /usr/lib/hadoop/client/hadoop-common-2.0.0* lib/
