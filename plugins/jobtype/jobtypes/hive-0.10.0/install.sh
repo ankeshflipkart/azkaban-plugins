@@ -34,6 +34,8 @@ cp_lib "*avro*"
 
 
 cp /usr/lib/hadoop/client/hadoop-common-2.0.0* lib/
+cp /usr/lib/hadoop/lib/hadoop-lzo-cdh4* lib/
+cp /usr/lib/hadoop/lib/protobuf-* lib/
 cp /usr/lib/hadoop/client/hadoop-auth-2.0.0* lib/
 cp /usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1* lib/
 cp /usr/lib/hadoop-hdfs/hadoop-hdfs-2.0.0* lib/
