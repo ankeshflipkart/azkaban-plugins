@@ -12,7 +12,14 @@ import azkaban.jobtype.hiveutils.azkaban.HiveViaAzkabanException;
 import azkaban.jobtype.hiveutils.azkaban.Utils;
 import azkaban.jobtype.hiveutils.azkaban.Utils.QueryPropKeys;
 
+/**
+ * Limitations: Currently cannot execute a query with line separators in it. (\n)
+ * 
+ * @author rama
+ *
+ */
 public class JDBCBatchExecutor {
+    
     private final static Logger LOG = Logger.getLogger("com.linkedin.jdbc.azkaban.jobtype.jdbc.JDBCBatchExecutor");
     private final Connection connection;
     private String query;
