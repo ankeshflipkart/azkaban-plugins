@@ -31,12 +31,18 @@ public class JDBCJob {
         if (p == null) {
             throw new AzkabanJDBCException("Properties is null.  Can't continue");
         }
-
-        if (!p.containsKey(AZK_HIVE_ACTION)) {
-            throw new AzkabanJDBCException("Must specify a " + AZK_HIVE_ACTION + " key and value.");
+        if (!p.containsKey(JDBC_DRIVER)) {
+            throw new AzkabanJDBCException("Need a driver mentioned against: " + JDBC_DRIVER);
         }
-        String jdbcAction = p.getProperty(AZK_HIVE_ACTION);
+        
+        String jdbcAction = JDBC_UPDATE;
+         
+        if (p.containsKey(AZK_HIVE_ACTION)) {
+            jdbcAction = p.getProperty(AZK_HIVE_ACTION);
+        }
+        
         String driverName = p.getProperty(JDBC_DRIVER);
+        // #azk.jdbc.action=update
         
         LOG.info("Starting: " + jdbcAction);
         JDBCBatchExecutor batchExecutor = new JDBCBatchExecutor(p , driverName);
