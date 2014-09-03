@@ -13,7 +13,7 @@ cp_lib() {
   #cp_lib "commons-dbcp*"
   #cp_lib "commons-pool*"
   #cp_lib "datanucleus-connectionpool*"
-  cp_lib "datanucleus-core-"
+  cp_lib "datanucleus-core-*"
   #Below 2 Not needed for new b1 cluster 
   #cp_lib "datanucleus-core-2.0.3-ZD5977*"
   #cp_lib "datanucleus-enhancer*"
