@@ -41,8 +41,7 @@ cp_lib() {
   cp /usr/lib/hadoop/lib/hadoop-lzo-cdh4* lib/
   cp /usr/lib/hadoop/lib/protobuf-* lib/
   cp /usr/lib/hadoop/client/hadoop-auth-2.3.0* lib/
-  #Check the one for YARN
-  #cp /usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.3.0-mr1* lib/
+  cp /usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.3.0-mr1* lib/
   cp /usr/lib/hadoop-hdfs/hadoop-hdfs-2.3.0* lib/
 
   cd -
